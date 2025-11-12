@@ -1,0 +1,49 @@
+{% block sw_cms_element_category_slider %}
+      <div class="sw-cms-el-category-slider has--navigation">
+        <div class="sw-cms-el-category-slider__content">
+            <mt-icon
+               name="regular-chevron-left"
+               size="24"
+            />
+            <div class="sw-cms-el-category-slider__category-container">
+                <div class="sw-cms-el-category-box box-standard">
+                    <div class="sw-cms-el-category-box__content">
+                        <div class="sw-cms-el-category-box">
+                             <img
+                                 :src="assetFilter('/manzketeichtechnikcategoryslider/administration/static/img/cms/preview_category.jpg')"
+                                 alt=""
+                              >
+                              <p>{{ $tc('sw-cms.elements.categorySliderElement.categoryName') }}</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="sw-cms-el-category-box box-standard">
+                    <div class="sw-cms-el-category-box__content">
+                        <div class="sw-cms-el-category-box">
+                             <img
+                                 :src="assetFilter('/manzketeichtechnikcategoryslider/administration/static/img/cms/preview_category.jpg')"
+                                 alt=""
+                              >
+                              <p>{{ $tc('sw-cms.elements.categorySliderElement.categoryName') }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sw-cms-el-category-box box-standard">
+                    <div class="sw-cms-el-category-box__content">
+                        <div class="sw-cms-el-category-box">
+                           <img
+                              :src="assetFilter('/manzketeichtechnikcategoryslider/administration/static/img/cms/preview_category.jpg')"
+                              alt=""
+                           >
+                           <p>{{ $tc('sw-cms.elements.categorySliderElement.categoryName') }}</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <mt-icon
+               name="regular-chevron-right"
+               size="24"
+            />
+        </div>
+    </div>
+{% endblock %}

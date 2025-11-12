@@ -1,0 +1,19 @@
+{
+    "sw-cms": {
+        "elements": {
+            "categorySliderElement": {
+                "categoryName": "Kategorie name"
+            },
+            "categorySlider": {
+                "config": {
+                    "label": {
+                        "title": "Kategorieslider"
+                    },
+                    "placeholder": {
+                        "title": "Kategorie auswählen"
+                    }
+                }
+            }
+        }
+    }
+}

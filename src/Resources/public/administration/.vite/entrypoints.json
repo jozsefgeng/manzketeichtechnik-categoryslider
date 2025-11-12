@@ -1,0 +1,27 @@
+{
+  "base": "/bundles/manzketeichtechnikcategoryslider/administration/",
+  "entryPoints": {
+    "manzke-teichtechnik-category-slider": {
+      "css": [
+        "/bundles/manzketeichtechnikcategoryslider/administration/assets/manzke-teichtechnik-category-slider-BHBfiyec.css"
+      ],
+      "dynamic": [
+        "/bundles/manzketeichtechnikcategoryslider/administration/assets/index-jUCdFL7l.js"
+      ],
+      "js": [
+        "/bundles/manzketeichtechnikcategoryslider/administration/assets/manzke-teichtechnik-category-slider-tb6KuWyN.js"
+      ],
+      "legacy": false,
+      "preload": []
+    }
+  },
+  "legacy": false,
+  "metadatas": {},
+  "version": [
+    "7.1.0",
+    7,
+    1,
+    0
+  ],
+  "viteServer": null
+}

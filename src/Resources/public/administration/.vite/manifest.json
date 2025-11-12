@@ -1,0 +1,20 @@
+{
+  "main.js": {
+    "file": "assets/manzke-teichtechnik-category-slider-tb6KuWyN.js",
+    "name": "manzke-teichtechnik-category-slider",
+    "src": "main.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "module/sw-cms/blocks/commerce/category-slider/component/sw-cms-category-box-preview/index.js"
+    ],
+    "css": [
+      "assets/manzke-teichtechnik-category-slider-BHBfiyec.css"
+    ]
+  },
+  "module/sw-cms/blocks/commerce/category-slider/component/sw-cms-category-box-preview/index.js": {
+    "file": "assets/index-jUCdFL7l.js",
+    "name": "index",
+    "src": "module/sw-cms/blocks/commerce/category-slider/component/sw-cms-category-box-preview/index.js",
+    "isDynamicEntry": true
+  }
+}

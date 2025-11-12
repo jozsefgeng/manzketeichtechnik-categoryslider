@@ -1,0 +1,2 @@
+const e=`{% block sw_cms_category_box_preview %} <div class="sw-cms-category-box-preview"> <div class="sw-cms-category-box-preview__image"> <img :src="assetFilter('/manzketeichtechnikcategoryslider/administration/static/img/cms/preview_category.jpg')" alt="" > <p>{{ "sw-cms.elements.categorySliderElement.categoryName"|trans|sw_sanitize }}</p> </div> </div> {% endblock %}`,t={template:e,props:{},computed:{assetFilter(){return Shopware.Filter.getByName("asset")}}};export{t as default};
+//# sourceMappingURL=index-jUCdFL7l.js.map

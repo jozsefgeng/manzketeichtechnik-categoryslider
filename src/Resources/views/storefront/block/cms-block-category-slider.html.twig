@@ -1,0 +1,10 @@
+{% block block_category_slider %}
+    {% set element = block.slots.getSlot('categorySlider') %}
+    {% set columns = 1 %}
+
+    <div class="col-12">
+        {% block block_category_slider_inner %}
+            {% sw_include '@Storefront/storefront/element/cms-element-category-slider.html.twig' ignore missing %}
+        {% endblock %}
+    </div>
+{% endblock %}

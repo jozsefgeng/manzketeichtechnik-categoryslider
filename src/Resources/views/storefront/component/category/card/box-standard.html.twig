@@ -1,0 +1,31 @@
+{% block component_category_box %}
+    <div class="card pcategory-box box-standard">
+        {% block component_category_box_content %}
+            <div class="card-body">
+                
+                {% block component_category_box_image %}
+                    <div class="category-image-wrapper">
+
+                        {% block component_category_box_image_inner %}
+                            {% block component_category_box_image_link_inner %}
+                                image
+                            {% endblock %}
+                        {% endblock %}
+
+                    </div>
+                {% endblock %}
+
+                {% block component_category_box_info %}
+                    <div class="category-info">
+                        {% block component_category_box_name %}
+                            <a href="{{ seoUrl('frontend.home.page') }}"
+                                class="category-name stretched-link">
+                                {{ name }}
+                            </a>
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}
