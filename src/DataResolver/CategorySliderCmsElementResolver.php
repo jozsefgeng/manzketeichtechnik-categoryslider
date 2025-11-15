@@ -15,6 +15,7 @@ use Shopware\Core\Framework\DataAbstractionLayer\Search\Criteria;
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\EqualsFilter;
 use Shopware\Core\Framework\Uuid\Uuid;
 use Shopware\Core\Content\Category\CategoryCollection;
+use Shopware\Core\Content\Category\CategoryEntity;
 use Shopware\Core\Content\Category\SalesChannel\SalesChannelCategoryEntity;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepository;
 
@@ -77,7 +78,10 @@ class CategorySliderCmsElementResolver extends AbstractCmsElementResolver
 
         $entity = $resolverContext->getEntity();
 
-        if ($entity instanceof SalesChannelCategoryEntity) {
+        if (
+            $entity instanceof SalesChannelCategoryEntity
+            || $entity instanceof CategoryEntity
+        ) {
             $slot->setData(new ArrayStruct([
                 'categorySlider' => [
                     'category' => $entity,
