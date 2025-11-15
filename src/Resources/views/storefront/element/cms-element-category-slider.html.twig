@@ -1,38 +1,34 @@
 {% block element_category_slider %}
-    {% if not sliderConfig %}
-        {% set sliderConfig = element.fieldConfig.elements %}
-    {% endif %}
-
-    {% set blockId = block.id %}
-
-    <div class="cms-element-category-slider">
-        {% block element_category_slider_alignment %}
-            {% block element_category_slider_slider %}
-                <div class="base-slider category-slide" tabindex="0">
-                    {% block element_category_slider_title %}
-                        {% if sliderConfig.title.value %}
-                            <div class="cms-element-title">
-                                <p class="cms-element-title-paragraph">{{ sliderConfig.title.value }}</p>
-                            </div>
-                        {% endif %}
-                    {% endblock %}
-
-                    {% block element_category_slider_inner %}
-                        {% block element_category_slider_element %}
-                            <div class="category-slider-container" data-category-slider-container="true">
-                                {% for category in element.data.categories.elements %}
-                                    {% block element_category_slider_inner_item %}
-                                        <div class="category-slider-item">
-                                            {% sw_include '@Storefront/storefront/component/category/card/box.html.twig' %}
-                                        </div>
-                                    {% endblock %}
-                                {% endfor %}
-                            </div>
+    {% if categorySlider.children|length > 0  %}
+        <div class="cms-element-category-slider">
+            {% block element_category_slider_alignment %}
+                {% block element_category_slider_slider %}
+                    <div class="swiper" tabindex="0">
+                        {% block element_category_slider_title %}
+                            {% if sliderConfig.title.value %}
+                                <div class="cms-element-title">
+                                    <p class="cms-element-title-paragraph">{{ sliderConfig.title.value }}</p>
+                                </div>
+                            {% endif %}
                         {% endblock %}
-                    {% endblock %}
-                </div>
+
+                        {% block element_category_slider_inner %}
+                            {% block element_category_slider_element %}
+                                <div class="category-slider-container swiper-wrapper" data-category-slider-container="true">
+                                    {% for category in categorySlider.children %}
+                                        {% block element_category_slider_inner_item %}
+                                            <div class="category-slider-item swiper-slide">
+                                                {% sw_include '@Storefront/storefront/component/category/card/box.html.twig' %}
+                                            </div>
+                                        {% endblock %}
+                                    {% endfor %}
+                                </div>
+                            {% endblock %}
+                        {% endblock %}
+                    </div>
+                {% endblock %}
             {% endblock %}
-        {% endblock %}
-    </div>
+        </div>
+    {% endif %}
 
 {% endblock %}

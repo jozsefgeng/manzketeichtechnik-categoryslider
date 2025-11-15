@@ -1,26 +1,24 @@
 {% block component_category_box %}
-    <div class="card pcategory-box box-standard">
+    <div class="card pcategory-box box-standard bg-white hover:opacity-75 h-auto p-2.5">
         {% block component_category_box_content %}
             <div class="card-body">
                 
                 {% block component_category_box_image %}
                     <div class="category-image-wrapper">
-
                         {% block component_category_box_image_inner %}
                             {% block component_category_box_image_link_inner %}
-                                image
+                                <img src="{{ category.media.url }}" class="mb-2.5 w-full max-w-40"/>
                             {% endblock %}
                         {% endblock %}
-
                     </div>
                 {% endblock %}
 
                 {% block component_category_box_info %}
                     <div class="category-info">
                         {% block component_category_box_name %}
-                            <a href="{{ seoUrl('frontend.home.page') }}"
-                                class="category-name stretched-link">
-                                {{ name }}
+                            <a href="{{ seoUrl('frontend.navigation.page',  { navigationId: category.id }) }}"
+                                class="category-name stretched-link color-neutral-100 font-medium text-sm">
+                                {{ category.translated.name|raw }}
                             </a>
                         {% endblock %}
                     </div>
