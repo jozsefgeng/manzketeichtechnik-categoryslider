@@ -3,7 +3,7 @@
         <div class="cms-element-category-slider">
             {% block element_category_slider_alignment %}
                 {% block element_category_slider_slider %}
-                    <div class="swiper" tabindex="0">
+                    <div class="swiper swiper-category-slider" tabindex="0">
                         {% block element_category_slider_title %}
                             {% if sliderConfig.title.value %}
                                 <div class="cms-element-title">
@@ -14,14 +14,21 @@
 
                         {% block element_category_slider_inner %}
                             {% block element_category_slider_element %}
-                                <div class="category-slider-container swiper-wrapper" data-category-slider-container="true">
+                                <div class="category-slider-container swiper-wrapper mb-8" data-category-slider-container="true">
                                     {% for category in categorySlider.children %}
                                         {% block element_category_slider_inner_item %}
-                                            <div class="category-slider-item swiper-slide">
+                                            <div class="category-slider-item swiper-slide flex over:opacity-75 h-auto">
                                                 {% sw_include '@Storefront/storefront/component/category/card/box.html.twig' %}
                                             </div>
                                         {% endblock %}
                                     {% endfor %}
+                                </div>
+                                <div class="flex">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="flex ml-auto h-full">
+                                        <div class="swiper-button-prev flex items-center relative"></div>
+                                        <div class="swiper-button-next flex items-center relative right-0"></div>
+                                    </div>
                                 </div>
                             {% endblock %}
                         {% endblock %}

@@ -1,5 +1,8 @@
 import Plugin from 'src/plugin-system/plugin.class';
 import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+
+Swiper.use([Navigation, Pagination]);
 
 export default class CategorySlider extends Plugin {
 
@@ -13,8 +16,9 @@ export default class CategorySlider extends Plugin {
      * @private
      */
     _init() {
-        const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper('.swiper-category-slider', {
             slidesPerView: 2,
+            spaceBetween: 10,
             breakpoints: {
                 640: {
                     slidesPerView: 3,
@@ -28,6 +32,16 @@ export default class CategorySlider extends Plugin {
                 1536: {
                     slidesPerView: 6,
                 }
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
         });
     }
